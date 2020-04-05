@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="apiWindow" prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.butowt.krzysztof.controllers.ApiController">
+
+    <Label prefWidth="435.0" GridPane.columnIndex="0" GridPane.rowIndex="1">Select directory with drawings </Label>
+    <Button maxHeight="50" mnemonicParsing="false" onAction="#selectData" prefWidth="165.0" text="%chooseDirectory" BorderPane.alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <TextField fx:id="directoryToDrawings" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+    <Label prefWidth="435.0" GridPane.columnIndex="0" GridPane.rowIndex="3">Select directory with schedules</Label>
+    <Button maxHeight="50" mnemonicParsing="false" onAction="#selectDrawingSchedulesDirectory" prefWidth="165.0" text="%chooseDirectory" BorderPane.alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <TextField fx:id="directoryToSchedules" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+    <Label minWidth="435.0" GridPane.columnIndex="0" GridPane.rowIndex="5">Select input data format</Label>
+    <ChoiceBox fx:id="fileTypes" maxHeight="50" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <Label minHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <Button maxHeight="50" minHeight="50.0" mnemonicParsing="false" onAction="#generateSchedule" prefWidth="600.0" text="%generate" BorderPane.alignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="7">
+      <GridPane.margin>
+         <Insets left="150.0" right="150.0" />
+      </GridPane.margin></Button>
+   <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="8">
+      <bottom>
+         <TextField fx:id="footer" alignment="CENTER" minWidth="600" prefHeight="20.0" text="Drawing Schedule Generator v. 1.0.0 © KButowt 2020" BorderPane.alignment="CENTER" />
+      </bottom>
+      <padding>
+         <Insets top="100.0" />
+      </padding>
+   </BorderPane>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="100.0" />
+   </padding>
+</GridPane>
